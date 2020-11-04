@@ -1,5 +1,5 @@
 import React from "react";
-// import Welcome from "./components/welcome";
+import Welcome from "./components/welcome";
 import Home from "./components/home";
 
 import Table from './components/table';
@@ -45,6 +45,7 @@ class App extends React.Component {
                         </Route>
                         <Route path="/">
                             <Home changeToTable={this.changeToTable} />
+                            {/* <Welcome changeToTable={this.changeToTable} /> */}
                         </Route>
                     </Switch>
                 </div>
