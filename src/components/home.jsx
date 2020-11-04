@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FaPlay, FaUserNinja } from 'react-icons/fa';
 
-class Welcome extends React.Component {
+class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -62,43 +63,22 @@ class Welcome extends React.Component {
 
     render() {
         return (
-            <div className="welcome">
+            <div className="home">
                 <div className="wrapper">
-                    <h1 className="welcomeHeader">Welcome To 4 In A Row!</h1>
-                    <form action="/action_page.php">
-                        <div>
-                            <label>Rows: </label>
-                            <input className="inputSize input" type="number" name={"rows"} value={this.state.rows} onChange={this.handleInputChange} min="4" max="6" placeholder="0" />
-
-                            <label>Cols: </label>
-                            <input className="inputSize input" type="number" name={"col"} value={this.state.col} onChange={this.handleInputChange} min="4" max="8" placeholder="0" />
-                        </div>
-
-                        <br />
-
-
-                        <div>
-                            <label>Number of player: </label>
-                            <input className="inputSize input" type="number" name={"numOfPlayers"} value={this.state.numOfPlayers} onChange={this.handleInputChange} min="1" max="2" placeholder="0" />
-                        </div>
-                        {this.chackNumOfPlayers()}
-                        {this.chackIfPlayerOrComputer()}
-                        
-                        <br />
-
-                        <div>
-                            <label>The best of: </label>
-                            <input className="inputSize input" type="number" name={"theBestOf"} value={this.state.theBestOf} onChange={this.handleInputChange} min="1" step="2" placeholder="1" />
-                        </div>
-                    </form>
-                    <br />
-                    {this.state.rows && this.state.col && this.state.numOfPlayers &&
-                        <Link className="link linkToTable inputSize input" to="/tabel">Start</Link>
-                    }
+                    <h1 className="header">Welcome To 4 In A Row!</h1>
+                    <div className='row square_wrapper'>
+                        <button className="square square_buttons">
+                            <FaUserNinja />
+                        </button>
+                        <button className="square square_buttons">
+                            <FaUserNinja />
+                        </button>
+                    </div>
+                    <Link className="play square" to="/tabel"><FaPlay /></Link>
                 </div>
             </div>
         )
     }
 }
 
-export default Welcome;
+export default Home;

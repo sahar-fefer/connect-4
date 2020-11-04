@@ -1,40 +1,44 @@
-.welcome {
+.home {
   display: inline-block;
-  text-align: center;
   height: 100vh;
   width: 100%;
   background: #fecdff;
   background: -webkit-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
   background: -o-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
   background: linear-gradient(29deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%); }
-  .welcome .welcomeHeader {
+  .home .header {
     margin: 0;
     padding: 0; }
-  .welcome .wrapper {
+  .home .wrapper {
     background-color: rgba(255, 255, 255, 0.5);
     display: inline-block;
-    text-align: center;
     width: 65%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
-    border-radius: 10px; }
-  .welcome .input {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    text-align: center;
-    outline: none;
-    border-radius: 5px; }
-  .welcome .inputSize {
-    padding: 10px 15px;
-    width: 30%;
-    height: 1.5rem; }
-  .welcome .link {
+    border-radius: 15px; }
+  .home .square_wrapper {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .home .square {
+    text-decoration: none;
+    border: 2px solid white;
+    outline: none; }
+  .home .square_buttons {
+    background-color: CadetBlue;
+    color: #220e0e;
+    font-size: 5em;
+    padding: 10px 40px;
+    border-radius: 15px; }
+  .home .play {
     background-color: violet;
     color: dimgray;
-    text-decoration: none; }
-  .welcome .linkToTable {
+    padding: 10px 15px;
+    height: 1.5rem;
+    border-radius: 10px; }
+  .home .linkToTable {
     width: 10% !important; }
 
 * {

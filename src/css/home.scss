@@ -1,47 +1,53 @@
-.welcome {
+.home {
     display: inline-block;
-    text-align: center;
     height: 100vh;
     width: 100%;
-    background: rgb(254,205,255);
-    background: linear-gradient(29deg, rgba(254,205,255,1) 0%, rgba(155,242,228,0.9364788151588761) 100%);
-    
-    .welcomeHeader {
+    background: rgb(254, 205, 255);
+    background: linear-gradient(29deg, rgba(254, 205, 255, 1) 0%, rgba(155, 242, 228, 0.9364788151588761) 100%);
+
+    .header {
         margin: 0;
         padding: 0;
     }
-    
+
     .wrapper {
-        background-color: rgba(255, 255, 255, .5);
+        background-color: rgba(255, 255, 255, 0.5);
         display: inline-block;
-        text-align: center;
         width: 65%;
         height: fit-content;
         padding-bottom: 1.5rem;
         margin-top: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .square_wrapper {
+        // display: flex;
+        justify-content: space-around;
+    }
+
+    .square {
+        text-decoration: none;
+        border: 2px solid white;
+        outline: none;
+    }
+
+    .square_buttons {
+        background-color: CadetBlue;
+        color: rgb(34, 14, 14);
+        font-size: 5em;
+        padding: 10px 40px;
+        border-radius: 15px;
+    }
+
+    .play {
+        background-color: violet;
+        color: dimgray;
+        padding: 10px 15px;
+        height: 1.5rem;
         border-radius: 10px;
     }
 
-    .input {
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        text-align: center;
-        outline: none;
-        border-radius: 5px;
-    }
-    
-    .inputSize {
-        padding: 10px 15px;
-        width: 30%;
-        height: 1.5rem;
-    }
-    
-    .link {
-        background-color: violet;
-        color: dimgray;
-        text-decoration: none;
-    }
-    
     .linkToTable {
         width: 10% !important;
-    }        
+    }
 }
