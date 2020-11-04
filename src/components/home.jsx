@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaPlay, FaUserNinja } from 'react-icons/fa';
+import { FaPlay, FaUserNinja, FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
 
 class Home extends React.Component {
     constructor(props) {
@@ -17,49 +17,21 @@ class Home extends React.Component {
         };
     };
 
-    handleInputChange = (e) => {
-        const { name, value } = e.target;
+    setNumOfPlayers = (numOfPlayers) => {
         this.setState({
-            [name]: value
+            'numOfPlayers': numOfPlayers
         });
-        this.props.changeToTable(name, value)
+        this.props.changeToTable('numOfPlayers', numOfPlayers)
+    }
+
+    setBoardSize = (col, rows) => {
+        this.setState({
+            'col': col,
+            'rows': rows
+        });
+        this.props.changeToTable('col', col);
+        this.props.changeToTable('rows', rows);
     };
-
-    chackIfPlayerOrComputer = () => {
-        if (this.state.numOfPlayers == 1) {
-            return (
-                <div className="againstComputerMsg">Playing against the computer</div>
-            )
-        } else if (this.state.numOfPlayers == 2) {
-            return (
-                <div>
-                    <header>Player 2</header>
-                    Name: <input className="inputPlayer input" type="text"
-                        name={"player2Name"} value={this.state.player2Name}
-                        onChange={this.handleInputChange} />
-                    Select your color: <input className="inputPlayer input" type="color"
-                        name={"player2color"} value={this.state.player2color}
-                        onChange={this.handleInputChange} />
-                </div>
-            )
-        }
-    }
-
-    chackNumOfPlayers = () => {
-        if (this.state.numOfPlayers) {
-            return (
-                < div >
-                    <header>Player 1</header>
-                    Name: <input className="inputPlayer input" type="text"
-                        name={"player1Name"} value={this.state.player1Name}
-                        onChange={this.handleInputChange} />
-                    Select your color: <input className="inputPlayer input" type="color"
-                        name={"player1color"} value={this.state.player1color}
-                        onChange={this.handleInputChange} />
-                </div >
-            )
-        }
-    }
 
     render() {
         return (
@@ -67,11 +39,23 @@ class Home extends React.Component {
                 <div className="wrapper">
                     <h1 className="header">Welcome To 4 In A Row!</h1>
                     <div className='row square_wrapper'>
-                        <button className="square square_buttons">
-                            <FaUserNinja />
+                        <button className="square buttons_square player_square" onClick={() => this.setNumOfPlayers(1)}>
+                            <FaUserAstronaut onClick={() => this.setNumOfPlayers(1)} />
                         </button>
-                        <button className="square square_buttons">
-                            <FaUserNinja />
+                        <button className="square buttons_square two_players_square" onClick={() => this.setNumOfPlayers(2)}>
+                            <FaUserNinja onClick={() => this.setNumOfPlayers(2)} />
+                            <FaUserSecret onClick={() => this.setNumOfPlayers(2)} />
+                        </button>
+                    </div>
+                    <div className='row square_wrapper'>
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(5, 6)}>
+                            5X6
+                        </button>
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(6, 7)}>
+                            6X7
+                        </button>
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(7, 8)}>
+                            7X8
                         </button>
                     </div>
                     <Link className="play square" to="/tabel"><FaPlay /></Link>
