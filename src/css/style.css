@@ -1,0 +1,149 @@
+.welcome {
+  display: inline-block;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background: #fecdff;
+  background: -webkit-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
+  background: -o-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
+  background: linear-gradient(29deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%); }
+  .welcome .welcomeHeader {
+    margin: 0;
+    padding: 0; }
+  .welcome .wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    text-align: center;
+    width: 65%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px; }
+  .welcome .input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    outline: none;
+    border-radius: 5px; }
+  .welcome .inputSize {
+    padding: 10px 15px;
+    width: 30%;
+    height: 1.5rem; }
+  .welcome .link {
+    background-color: violet;
+    color: dimgray;
+    text-decoration: none; }
+  .welcome .linkToTable {
+    width: 10% !important; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.main {
+  text-align: center;
+  background-image: url(https://www.mensjournal.com/wp-content/uploads/2016/07/stars-feature-1.jpg?w=1320);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.board {
+  background-color: #a9a9a94f;
+  display: inline-block;
+  border-radius: 25px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  padding: 10px; }
+
+.cell {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 5px; }
+
+.playerSide {
+  position: absolute;
+  top: 100px;
+  border-radius: 10px;
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.39); }
+
+.player1Side {
+  left: 50px; }
+
+.player2Side {
+  right: 50px; }
+
+.playerName {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 10px; }
+
+.undo {
+  width: 100px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  background-color: aquamarine; }
+
+.WrapperGameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.gameOver {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px; }
+
+.gameOverHeader {
+  font-size: 7rem;
+  margin-bottom: 0; }
+
+.gameOverText {
+  font-size: 3rem;
+  margin: 0; }
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.linkToWelcome {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+
+.againstComputerMsg {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(149, 204, 165, 0.2); }
