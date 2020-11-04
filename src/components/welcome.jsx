@@ -93,7 +93,7 @@ class Welcome extends React.Component {
                     </form>
                     <br />
                     {this.state.rows && this.state.col && this.state.numOfPlayers &&
-                        <Link className="link linkToTable inputSize input" to="/tabel">Start</Link>
+                        <Link className="play linkToTable inputSize input" to="/tabel">Start</Link>
                     }
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
-import Welcome from "./components/welcome";
+// import Welcome from "./components/welcome";
+import Home from "./components/home";
 
 import Table from './components/table';
 import "../src/css/style.css";
@@ -43,7 +44,7 @@ class App extends React.Component {
                             <Link className="link linkToWelcome input" to="/">Back To Welcome Page</Link>
                         </Route>
                         <Route path="/">
-                            <Welcome changeToTable={this.changeToTable} />
+                            <Home changeToTable={this.changeToTable} />
                         </Route>
                     </Switch>
                 </div>
