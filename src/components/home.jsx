@@ -8,10 +8,10 @@ class Home extends React.Component {
         this.state = {
             rows: undefined,
             col: undefined,
-            player1Name: undefined,
-            player1color: undefined,
-            player2Name: undefined,
-            player2color: undefined,
+            player1Name: 'player1',
+            player1color: '#8B008B',
+            player2Name: 'player2',
+            player2color: '#00CED1',
             numOfPlayers: undefined,
             theBestOf: 1
         };
@@ -37,7 +37,7 @@ class Home extends React.Component {
         return (
             <div className="home">
                 <div className="wrapper">
-                    <h1 className="header">Welcome To 4 In A Row!</h1>
+                    <h1 className="header">4 In A Row</h1>
                     <div className='row square_wrapper'>
                         <button className="square buttons_square player_square" onClick={() => this.setNumOfPlayers(1)}>
                             <FaUserAstronaut onClick={() => this.setNumOfPlayers(1)} />
@@ -48,14 +48,14 @@ class Home extends React.Component {
                         </button>
                     </div>
                     <div className='row square_wrapper'>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(5, 6)}>
-                            5X6
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(5, 5)}>
+                            5X5
                         </button>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(6, 7)}>
-                            6X7
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(6, 5)}>
+                            6X5
                         </button>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(7, 8)}>
-                            7X8
+                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(7, 5)}>
+                            7X5
                         </button>
                     </div>
                     <Link className="play square" to="/tabel"><FaPlay /></Link>
