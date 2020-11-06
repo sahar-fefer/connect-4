@@ -36,29 +36,31 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <div className="wrapper">
+                <div className="wrapper container">
                     <h1 className="header">4 In A Row</h1>
                     <div className='row square_wrapper'>
-                        <button className="square buttons_square player_square" onClick={() => this.setNumOfPlayers(1)}>
+                        <button className="square player_square col" onClick={() => this.setNumOfPlayers(1)}>
                             <FaUserAstronaut onClick={() => this.setNumOfPlayers(1)} />
                         </button>
-                        <button className="square buttons_square two_players_square" onClick={() => this.setNumOfPlayers(2)}>
+                        <button className="square player_square col" onClick={() => this.setNumOfPlayers(2)}>
                             <FaUserNinja onClick={() => this.setNumOfPlayers(2)} />
                             <FaUserSecret onClick={() => this.setNumOfPlayers(2)} />
                         </button>
                     </div>
                     <div className='row square_wrapper'>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(5, 5)}>
-                            5X5
+                        <button className="square board_square s col" onClick={() => this.setBoardSize(5, 5)}>
+                            S
                         </button>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(6, 5)}>
-                            6X5
+                        <button className="square board_square m col" onClick={() => this.setBoardSize(6, 5)}>
+                            M
                         </button>
-                        <button className="square buttons_square board_square" onClick={() => this.setBoardSize(7, 5)}>
-                            7X5
+                        <button className="square board_square l col" onClick={() => this.setBoardSize(7, 5)}>
+                            L
                         </button>
                     </div>
-                    <Link className="play square" to="/tabel"><FaPlay /></Link>
+                    <div className="row">
+                        <Link className="square play col" to="/tabel"><FaPlay /></Link>
+                    </div>
                 </div>
             </div>
         )
