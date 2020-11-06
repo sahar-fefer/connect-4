@@ -8,7 +8,10 @@
   background: linear-gradient(29deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%); }
   .home .header {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bolder;
+    font-size: 4rem; }
   .home .wrapper {
     background-color: rgba(255, 255, 255, 0.5);
     display: inline-block;
