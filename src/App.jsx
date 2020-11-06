@@ -18,10 +18,10 @@ class App extends React.Component {
         this.state = {
             rows: undefined,
             col: undefined,
-            player1Name: undefined,
-            player1color: undefined,
-            player2Name: undefined,
-            player2color: undefined,
+            player1Name: 'player1',
+            player1color: '#8B008B',
+            player2Name: 'player2',
+            player2color: '#00CED1',
             numOfPlayers: undefined,
             theBestOf: 1,
             game: undefined
