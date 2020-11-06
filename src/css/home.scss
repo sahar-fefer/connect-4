@@ -8,7 +8,6 @@
     .header {
         margin: 0;
         padding: 0;
-        font-family: "Comic Sans MS", cursive, sans-serif; 
         font-weight: bolder;
         font-size: 4rem;
     }
@@ -19,34 +18,59 @@
         width: 65%;
         height: fit-content;
         padding-bottom: 1.5rem;
-        margin-top: 1.5rem;
+        margin-top: 3%;
         border-radius: 15px;
+        max-width: 900px;
     }
 
     .square_wrapper {
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
     .square {
+        background-color: CadetBlue;
+        color: rgb(34, 14, 14);
+        border-radius: 15px;
         text-decoration: none;
         border: 2px solid white;
         outline: none;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 300px;
     }
 
-    .buttons_square {
-        background-color: CadetBlue;
-        color: rgb(34, 14, 14);
-        font-size: 5em;
-        padding: 10px 40px;
-        border-radius: 15px;
+    .player_square {
+        font-size: 5rem;
+        padding: 1% 4%;
+
+    }
+
+    .board_square {
+        padding: 1% 4%;
+
+        &.s {
+            font-size: 2rem;
+        }
+
+        &.m {
+            font-size: 3rem;
+        }
+
+        &.l {
+            font-size: 4rem;
+        }
     }
 
     .play {
-        background-color: violet;
-        color: dimgray;
-        padding: 10px 15px;
-        height: 1.5rem;
+        padding: 2% 3%;
         border-radius: 10px;
+        font-size: 1.3rem;
+        display: block;
+        width: fit-content;
+        margin-left: 80%;
     }
 
     .linkToTable {
