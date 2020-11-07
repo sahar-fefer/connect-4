@@ -45,6 +45,8 @@
     margin-left: 5%;
     margin-right: 5%;
     max-width: 300px; }
+    .home .square.err {
+      border: 2px solid #6d1c1c; }
   .home .chosen {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
