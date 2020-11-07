@@ -44,6 +44,10 @@
         margin-left: 5%;
         margin-right: 5%;
         max-width: 300px;
+
+        &.err {
+            border: 2px solid #6d1c1c;
+        }
     }
 
     .chosen {
