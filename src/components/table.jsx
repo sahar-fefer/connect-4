@@ -1,5 +1,6 @@
 import React from 'react';
 import Cell from './cell';
+import { FaUserNinja, FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
 
 const Game = require("../moduls/game");
 
@@ -89,12 +90,14 @@ class Table extends React.Component {
                     </div>
                 }
                 <div className="player1Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
-                    <div className="playerName" style={{ backgroundColor: this.colorOfPlayer("player1") }}>{this.props.data.player1Name}</div>
+                    <FaUserNinja className={'playerUser'}/>
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player1") }}/>
                     <div className="playerWins">Wins: {this.state.game.player1.wins}</div>
                 </div>
 
                 <div className="player2Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
-                    <div className="playerName" style={{ backgroundColor: this.colorOfPlayer("player2") }}>{this.props.data.player2Name}</div>
+                    <FaUserSecret className={'playerUser'}/>
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player2") }}/>
                     <div className="playerWins">Wins: {this.state.game.player2.wins}</div>
                 </div>
 
