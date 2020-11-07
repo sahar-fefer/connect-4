@@ -9,7 +9,7 @@
         margin: 0;
         padding: 0;
         font-weight: bolder;
-        font-size: 4rem;
+        font-size: 8vw;
     }
 
     .wrapper {
@@ -21,6 +21,10 @@
         margin-top: 3%;
         border-radius: 15px;
         max-width: 900px;
+        padding-right: 5%;
+        padding-left: 5%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .square_wrapper {
@@ -42,32 +46,37 @@
         max-width: 300px;
     }
 
-    .player_square {
-        font-size: 5rem;
-        padding: 1% 4%;
+    .chosen {
+        box-sizing: border-box;
+        border: 4px solid white;
+        background-color: #76c1c3;
+    }
 
+    .player_square {
+        font-size: 8vw;
+        padding: 1% 4%;
     }
 
     .board_square {
         padding: 1% 4%;
 
         &.s {
-            font-size: 2rem;
+            font-size: 4vw;
         }
 
         &.m {
-            font-size: 3rem;
+            font-size: 5vw;
         }
 
         &.l {
-            font-size: 4rem;
+            font-size: 6vw;
         }
     }
 
     .play {
         padding: 2% 3%;
         border-radius: 10px;
-        font-size: 1.3rem;
+        font-size: 3vw;
         display: block;
         width: fit-content;
         margin-left: 80%;
