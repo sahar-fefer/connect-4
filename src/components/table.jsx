@@ -1,6 +1,12 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import Cell from './cell';
+
 import { FaUserNinja, FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
+import { GoHome } from 'react-icons/go';
+import { ImUndo2 } from 'react-icons/im';
 
 const Game = require("../moduls/game");
 
@@ -8,7 +14,15 @@ class Table extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            game: new Game(this.props.data.numOfPlayers, this.props.data.player1Name, this.props.data.player1color, this.props.data.player2Name, this.props.data.player2color, this.props.data.col, this.props.data.rows, this.props.data.theBestOf),
+            game: new Game(
+                this.props.data.numOfPlayers, 
+                this.props.data.player1Name, 
+                this.props.data.player1color, 
+                this.props.data.player2Name, 
+                this.props.data.player2color, 
+                this.props.data.col, 
+                this.props.data.rows, 
+                this.props.data.theBestOf),
             test: null,
             board: null,
             loading: true,
@@ -89,19 +103,21 @@ class Table extends React.Component {
                         {this.initboard()}
                     </div>
                 }
+                <Link className="linkToWelcome" to="/"><GoHome /></Link>
                 <div className="player1Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
-                    <FaUserNinja className={'playerUser'}/>
-                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player1") }}/>
+                    <FaUserNinja className={'playerUser'} />
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player1") }} />
                     <div className="playerWins">Wins: {this.state.game.player1.wins}</div>
                 </div>
 
                 <div className="player2Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
-                    <FaUserSecret className={'playerUser'}/>
-                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player2") }}/>
+                    <FaUserSecret className={'playerUser'} />
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player2") }} />
                     <div className="playerWins">Wins: {this.state.game.player2.wins}</div>
                 </div>
-
-                <div className="undo" onClick={this.undoLastMove}>undo</div>
+                <div>
+                    <button className="undo" onClick={this.undoLastMove}><ImUndo2 /></button>
+                </div>
                 {this.state.game.board.endGame &&
                     <div className="WrapperGameOver">
                         <div className="gameOver">

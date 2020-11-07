@@ -61,19 +61,15 @@
 }
 
 .undo {
-    width: 100px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 3vw;
+    padding: 2vw 3vw;
+    border: none;
     border-radius: 10px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    background-color: aquamarine;
+    background-color: #ffffff63;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .WrapperGameOver {
@@ -82,7 +78,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .5);
+    background-color:#ffffff63;
 }
 
 .gameOver {
@@ -109,10 +105,21 @@ form {
 }
 
 .linkToWelcome {
-
     position: absolute;
-    top: 20px;
-    left: 20px;
+    bottom: 6vw;
+    right: 6vw;
+    background-color: #ffffff63;
+    border-radius: 10px;
+    padding: 1.5vw;
+    font-size: 7vw;
+    color: #160909;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    
+    &:hover {
+        color: #160909;
+    }
 }
 
 .againstComputerMsg {
