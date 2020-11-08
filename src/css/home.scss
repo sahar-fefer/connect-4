@@ -2,14 +2,12 @@
     display: inline-block;
     height: 100vh;
     width: 100%;
-    background: rgb(254, 205, 255);
-    background: linear-gradient(29deg, rgba(254, 205, 255, 1) 0%, rgba(155, 242, 228, 0.9364788151588761) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .header {
-        margin: 0;
-        padding: 0;
-        font-weight: bolder;
-        font-size: 8vw;
+    .logo {
+        margin-bottom: 6%;
     }
 
     .wrapper {
@@ -17,12 +15,10 @@
         display: inline-block;
         width: 65%;
         height: fit-content;
-        padding-bottom: 1.5rem;
         margin-top: 3%;
         border-radius: 15px;
         max-width: 900px;
-        padding-right: 5%;
-        padding-left: 5%;
+        padding: 5% 10%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -33,17 +29,24 @@
     }
 
     .square {
-        background-color: CadetBlue;
-        color: rgb(34, 14, 14);
+        color: #7c3c00;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+            150deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(217, 152, 22, 1) 0%,
+            rgba(245, 223, 49, 1) 40%,
+            rgba(255, 149, 0, 1) 100%
+        );
         border-radius: 15px;
         text-decoration: none;
-        border: 2px solid white;
+        border: 3px solid #904701;
         outline: none;
-        margin-top: 2.5%;
-        margin-bottom: 2.5%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin: 2.5% 5%;
         max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &.err {
             border: 2px solid #6d1c1c;
@@ -58,7 +61,7 @@
 
     .player_square {
         font-size: 8vw;
-        padding: 1% 4%;
+        padding: 4%;
     }
 
     .board_square {

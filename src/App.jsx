@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/home";
-
+import PreTable from './components/preTable';
 import Table from './components/table';
 import "../src/css/style.css";
 import {
@@ -26,6 +26,7 @@ class App extends React.Component {
         };
     }
     changeToTable = (name, value) => {
+        console.log('name, value', name, value);
         this.setState({
             [name]: value
         });
@@ -36,8 +37,11 @@ class App extends React.Component {
             <Router>
                 <div className="main">
                     <Switch>
-                        <Route path="/tabel">
+                        <Route path="/table">
                             <Table data={this.state} />
+                        </Route>
+                        <Route path="/pre-table">
+                            <PreTable changeToTable={this.changeToTable} />
                         </Route>
                         <Route path="/">
                             <Home changeToTable={this.changeToTable} />

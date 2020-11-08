@@ -2,15 +2,11 @@
   display: inline-block;
   height: 100vh;
   width: 100%;
-  background: #fecdff;
-  background: -webkit-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
-  background: -o-linear-gradient(61deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%);
-  background: linear-gradient(29deg, #fecdff 0%, rgba(155, 242, 228, 0.936479) 100%); }
-  .home .header {
-    margin: 0;
-    padding: 0;
-    font-weight: bolder;
-    font-size: 8vw; }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .home .logo {
+    margin-bottom: 6%; }
   .home .wrapper {
     background-color: rgba(255, 255, 255, 0.5);
     display: inline-block;
@@ -18,12 +14,10 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding-bottom: 1.5rem;
     margin-top: 3%;
     border-radius: 15px;
     max-width: 900px;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding: 5% 10%;
     margin-right: auto;
     margin-left: auto; }
   .home .square_wrapper {
@@ -34,17 +28,26 @@
     -ms-flex-align: end;
     align-items: flex-end; }
   .home .square {
-    background-color: CadetBlue;
-    color: #220e0e;
+    color: #7c3c00;
+    background: #020024;
+    background: -webkit-linear-gradient(300deg, #020024 0%, #d99816 0%, #f5df31 40%, #ff9500 100%);
+    background: -o-linear-gradient(300deg, #020024 0%, #d99816 0%, #f5df31 40%, #ff9500 100%);
+    background: linear-gradient(150deg, #020024 0%, #d99816 0%, #f5df31 40%, #ff9500 100%);
     border-radius: 15px;
     text-decoration: none;
-    border: 2px solid white;
+    border: 3px solid #904701;
     outline: none;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: 300px; }
+    margin: 2.5% 5%;
+    max-width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .home .square.err {
       border: 2px solid #6d1c1c; }
   .home .chosen {
@@ -54,7 +57,7 @@
     background-color: #76c1c3; }
   .home .player_square {
     font-size: 8vw;
-    padding: 1% 4%; }
+    padding: 4%; }
   .home .board_square {
     padding: 1% 4%; }
     .home .board_square.s {
