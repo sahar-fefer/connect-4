@@ -107,13 +107,13 @@ class Table extends React.Component {
                 <div className="player1Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
                     <FaUserNinja className={'playerUser'} />
                     <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player1") }} />
-                    <div className="playerWins">Wins: {this.state.game.player1.wins}</div>
+                    {/* <div className="playerWins">Wins: {this.state.game.player1.wins}</div> */}
                 </div>
 
                 <div className="player2Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
                     <FaUserSecret className={'playerUser'} />
                     <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player2") }} />
-                    <div className="playerWins">Wins: {this.state.game.player2.wins}</div>
+                    {/* <div className="playerWins">Wins: {this.state.game.player2.wins}</div> */}
                 </div>
                 <div>
                     <button className="undo" onClick={this.undoLastMove}><ImUndo2 /></button>
