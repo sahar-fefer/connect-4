@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Cell from './cell';
 
-import { AiOutlineUser } from 'react-icons/ai';
-import { RiComputerLine } from 'react-icons/ri';
+import { FaUserNinja, FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
 import { GoHome } from 'react-icons/go';
 import { ImUndo2 } from 'react-icons/im';
 
@@ -16,13 +15,13 @@ class Table extends React.Component {
         super(props);
         this.state = {
             game: new Game(
-                this.props.data.numOfPlayers,
-                this.props.data.player1Name,
-                this.props.data.player1color,
-                this.props.data.player2Name,
-                this.props.data.player2color,
-                this.props.data.col,
-                this.props.data.rows,
+                this.props.data.numOfPlayers, 
+                this.props.data.player1Name, 
+                this.props.data.player1color, 
+                this.props.data.player2Name, 
+                this.props.data.player2color, 
+                this.props.data.col, 
+                this.props.data.rows, 
                 this.props.data.theBestOf),
             test: null,
             board: null,
@@ -71,12 +70,10 @@ class Table extends React.Component {
     // }
 
     colorOfPlayer = (player) => {
-        if (player === "player1") {
+        if (player == "player1") {
             return this.props.data.player1color
-            // backgroundColor: rgb(252,19,11) backgroundColor: linear-gradient(309deg, rgba(252,19,11,1) 0%, rgba(252,55,48,1) 24%, rgba(247,14,1,1) 100%);
-        } else if (player === "player2") {
+        } else if (player == "player2") {
             return this.props.data.player2color
-            // backgroundColor: rgb(19,118,240) backgroundColor: linear-gradient(309deg, rgba(19,118,240,1) 0%, rgba(55,143,240,1) 24%, rgba(11,118,241,1) 100%);
         }
     };
 
@@ -92,42 +89,34 @@ class Table extends React.Component {
         if (this.state.game.currentPlayer.name === namePlayer) {
             return "2px solid white"
         } else {
-            return "2px solid transparent"
+            return "none"
         }
     }
 
 
 
     render() {
-        const { numOfPlayers } = this.state.game;
-        const { colorOfPlayer } = this;
-        console.log('num of players', numOfPlayers);
         return (
             <div>
                 {this.state.loading ? this.initGame() :
-                    <div className={'row'}>
-                        <div className="player1Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
-                            {
-                                numOfPlayers === 1
-                                    ? <RiComputerLine className={'playerUser'} />
-                                    : <AiOutlineUser className={'playerUser'} />
-                            }
-                            <div className="playerColor" style={{ backgroundColor: colorOfPlayer("player1")[0], background: colorOfPlayer("player1")[1] }} />
-                            {/* <div className="playerWins">Wins: {this.state.game.player1.wins}</div> */}
-                        </div>
-                        <div className={"board"}>
-                            {this.initboard()}
-                        </div>
-                        <div className="player2Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
-                            <AiOutlineUser className={'playerUser'} />
-                            <div className="playerColor" style={{ backgroundColor: colorOfPlayer("player2")[0], background: colorOfPlayer("player2")[1], border: `1px solid ${colorOfPlayer("player2")[0]}`}} />
-                            {/* <div className="playerWins">Wins: {this.state.game.player2.wins}</div> */}
-                        </div>
+                    <div className={"board"}>
+                        {this.initboard()}
                     </div>
                 }
-                <div className={"row table_buttons"}>
-                    <button className={"undo"} onClick={this.undoLastMove}><ImUndo2 /></button>
-                    <Link className={"link_to_welcome"} to="/"><GoHome /></Link>
+                <Link className="linkToWelcome" to="/"><GoHome /></Link>
+                <div className="player1Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
+                    <FaUserNinja className={'playerUser'} />
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player1") }} />
+                    {/* <div className="playerWins">Wins: {this.state.game.player1.wins}</div> */}
+                </div>
+
+                <div className="player2Side playerSide" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
+                    <FaUserSecret className={'playerUser'} />
+                    <div className="playerColor" style={{ backgroundColor: this.colorOfPlayer("player2") }} />
+                    {/* <div className="playerWins">Wins: {this.state.game.player2.wins}</div> */}
+                </div>
+                <div>
+                    <button className="undo" onClick={this.undoLastMove}><ImUndo2 /></button>
                 </div>
                 {this.state.game.board.endGame &&
                     <div className="WrapperGameOver">

@@ -7,7 +7,7 @@ class Cell extends React.Component {
             round: 0
         }
     }
-    
+
     onEnter = () => {
         console.log(this.props.col);
     };
@@ -23,7 +23,7 @@ class Cell extends React.Component {
 
     createColorState = () => {
         if (this.props.color === undefined) {
-            return "#ffffff8f"
+            return ["#ffffff8f", "#ffffff8f"]
         } else {
             return this.props.color
         }
@@ -43,7 +43,8 @@ class Cell extends React.Component {
 
             <div className="cell"
                 onClick={() => this.cellClicked()}
-                style={{ backgroundColor: this.createColorState() }} />
+                style={{ background: this.createColorState()[0], background: this.createColorState()[1]}} />
+                // , (!this.createColorState()[1] && {border: `8px double ${this.createColorState()[0]}`})
         )
     }
 }
