@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaRegUser, FaPlay, FaUserNinja, FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
-import { FiUser } from 'react-icons/fi';
 import { AiOutlineUser } from 'react-icons/ai';
 
 class Home extends React.Component {
@@ -22,12 +20,7 @@ class Home extends React.Component {
     render() {
         const { numOfPlayers } = this.state;
         return (
-            <div className="home" style={{
-                background: `url('${process.env.PUBLIC_URL}/images/background_home.jpg')`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-            }}>
+            <div className="home">
                 <div className="wrapper">
                     <img src='/images/c-logo.png' alt="logo" className={'logo'} />
                     <div className='row square_wrapper'>

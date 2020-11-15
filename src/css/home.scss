@@ -1,13 +1,9 @@
 .home {
-    display: inline-block;
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: contents;
 
     .logo {
         margin-bottom: 6%;
+        width: 30vw;
     }
 
     .wrapper {
@@ -15,12 +11,9 @@
         display: inline-block;
         width: 65%;
         height: fit-content;
-        margin-top: 3%;
         border-radius: 15px;
         max-width: 900px;
-        padding: 5% 10%;
-        margin-right: auto;
-        margin-left: auto;
+        padding: 1% 10%;
     }
 
     .square_wrapper {
@@ -47,10 +40,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &.err {
-            border: 2px solid #6d1c1c;
-        }
     }
 
     .chosen {
@@ -60,7 +49,7 @@
     }
 
     .player_square {
-        font-size: 8vw;
+        font-size: 6vw;
         padding: 4%;
     }
 

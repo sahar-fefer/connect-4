@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import { GoHome } from 'react-icons/go';
+
 class PreTable extends React.Component {
     constructor(props) {
         super(props);
@@ -45,6 +47,9 @@ class PreTable extends React.Component {
                             to={'/table'}>
                             L
                         </Link>
+                    </div>
+                    <div className={''}>
+                        <Link className={"link_to_welcome"} to="/"><GoHome /></Link>
                     </div>
                 </div>
             </div >

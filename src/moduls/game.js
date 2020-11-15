@@ -21,10 +21,10 @@ class Game {
         const computerPlayer = players.Computer;
 
         this.player1 = new realPlayer(this.player1Data[0], this.player1Data[1]);
-        if (this.numOfPlayers == 2) {
+        if (this.numOfPlayers === 2) {
             this.player2 = new realPlayer(this.player2Data[0], this.player2Data[1]);
         }
-        if (this.numOfPlayers == 1) {
+        if (this.numOfPlayers === 1) {
             this.player2 = new computerPlayer()
         }
         this.currentPlayer = this.player1;
