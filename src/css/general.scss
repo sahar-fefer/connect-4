@@ -1,10 +1,44 @@
 .main {
+    box-sizing: border-box;
     font-family: "Comic Sans MS", cursive, sans-serif; 
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     
     button {
         height: fit-content;
+    }
+
+    .link_to_welcome {
+        background-color: #ffffff63;
+        border-radius: 10px;
+        padding: 1vw 2vw;
+        font-size: 6.5vw;
+        color: #160909;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-left: 1vw;
+        margin-top: 2vw;
+        width: fit-content;
+
+        &:hover {
+            color: #160909;
+        }
+    }
+
+    @media screen and (min-width: 400px) {
+        .link_to_welcome {
+            font-size: 4.5vw;
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        .link_to_welcome {
+            font-size: 3.5vw;
+            margin-top: 0;
+        }
     }
 } 

@@ -105,30 +105,33 @@ class Table extends React.Component {
         return (
             <div>
                 {this.state.loading ? this.initGame() :
-                    <div className={'row table-wrapper'}>
-                        <div className="player1_side player_side" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
-                            {
-                                numOfPlayers === 1
-                                    ? <RiComputerLine className={'player_user'} />
-                                    : <AiOutlineUser className={'player_user'} />
-                            }
-                            <div className="player_color" style={{ backgroundColor: colorOfPlayer("player1")[0], background: colorOfPlayer("player1")[1] }} />
-                            {/* <div className="playerWins">Wins: {this.state.game.player1.wins}</div> */}
+                    <div className={'table-wrapper'}>
+                        <div className={'row'}>
+                            <div className="player1_side player_side" style={{ border: this.isThisCurPlayer(this.props.data.player1Name) }}>
+                                {
+                                    numOfPlayers === 1
+                                        ? <RiComputerLine className={'player_user'} />
+                                        : <AiOutlineUser className={'player_user'} />
+                                }
+                                <div className="player_color" style={{ backgroundColor: colorOfPlayer("player1")[0], background: colorOfPlayer("player1")[1] }} />
+                                {/* <div className="playerWins">Wins: {this.state.game.player1.wins}</div> */}
+                            </div>
+                            <div className={"board"}>
+                                {this.initboard()}
+                            </div>
+                            <div className="player2_side player_side" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
+                                <AiOutlineUser className={'player_user'} />
+                                <div className="player_color" style={{ backgroundColor: colorOfPlayer("player2")[0], background: colorOfPlayer("player2")[1], border: `1px solid ${colorOfPlayer("player2")[0]}` }} />
+                                {/* <div className="playerWins">Wins: {this.state.game.player2.wins}</div> */}
+                            </div>
                         </div>
-                        <div className={"board"}>
-                            {this.initboard()}
-                        </div>
-                        <div className="player2_side player_side" style={{ border: this.isThisCurPlayer(this.props.data.player2Name) }}>
-                            <AiOutlineUser className={'player_user'} />
-                            <div className="player_color" style={{ backgroundColor: colorOfPlayer("player2")[0], background: colorOfPlayer("player2")[1], border: `1px solid ${colorOfPlayer("player2")[0]}`}} />
-                            {/* <div className="playerWins">Wins: {this.state.game.player2.wins}</div> */}
+                        <div className={"row table_buttons"}>
+                            <button className={"undo"} onClick={this.undoLastMove}><ImUndo2 /></button>
+                            <Link className={"link_to_welcome"} to="/"><GoHome /></Link>
                         </div>
                     </div>
                 }
-                <div className={"row table_buttons"}>
-                    <button className={"undo"} onClick={this.undoLastMove}><ImUndo2 /></button>
-                    <Link className={"link_to_welcome"} to="/"><GoHome /></Link>
-                </div>
+
                 {this.state.game.board.endGame &&
                     <div className="WrapperGameOver">
                         <div className="gameOver">
