@@ -1,9 +1,14 @@
 .home {
     display: contents;
 
-    .logo {
-        margin-bottom: 6%;
-        width: 30vw;
+    .logo-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .logo {
+            margin-bottom: 6%;
+            width: 30vw;
+        }
     }
 
     .wrapper {
@@ -85,7 +90,7 @@
 
 @media screen and (min-width: 1600px) {
     .player_square {
-        font-size: 100px; 
-        width: 40%; 
+        font-size: 100px;
+        width: 40%;
     }
-  }
+}

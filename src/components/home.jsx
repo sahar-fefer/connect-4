@@ -22,7 +22,9 @@ class Home extends React.Component {
         return (
             <div className="home">
                 <div className="wrapper">
-                    <img src='/images/c-logo.png' alt="logo" className={'logo'} />
+                    <div className={'logo-wrapper'}>
+                        <img src='/images/c-logo.png' alt="logo" className={'logo'} />
+                    </div>
                     <div className='row square_wrapper'>
                         <Link className={`square player_square ${numOfPlayers === 1 ? 'chosen' : ''} col`}
                             onClick={() => this.setNumOfPlayers(1)}
